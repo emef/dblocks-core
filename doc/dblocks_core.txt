@@ -1,0 +1,25 @@
+Name(7)
+=======
+
+
+NAME
+----
+dblocks_core - Project
+
+
+SYNOPSIS
+--------
+----
+#include <dblocks_core.h>
+
+cc ['flags'] 'files' -ldblocks_core ['libraries']
+----
+
+
+DESCRIPTION
+-----------
+
+Classes
+~~~~~~~
+
+Something.

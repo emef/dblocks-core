@@ -1,0 +1,56 @@
+#
+#    dblocks-core - Project
+#
+#    Copyright (c) the Contributors as noted in the AUTHORS file.       
+#    This file is part of CZMQ, the high-level C binding for 0MQ:       
+#    http://czmq.zeromq.org.                                            
+#                                                                       
+#    This Source Code Form is subject to the terms of the Mozilla Public
+#    License, v. 2.0. If a copy of the MPL was not distributed with this
+#    file, You can obtain one at http://mozilla.org/MPL/2.0/.           
+
+Source:         dblocks-core
+Section:        net
+Priority:       optional
+Maintainer:     John Doe <John.Doe@example.com>
+Uploaders:      John Doe <John.Doe@example.com>
+Standards-Version: 3.9.5
+Build-Depends: bison, debhelper (>= 8),
+    pkg-config,
+    automake,
+    autoconf,
+    libtool,
+    libsodium-dev,
+    libzmq4-dev,
+    libczmq-dev,
+    dh-autoreconf,
+    systemd
+
+Package: libdblocks-core0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: dblocks-core
+ This package contains shared library for dblocks-core: project
+
+Package: dblocks-core-dev
+Architecture: all
+Section: libdevel
+Depends:
+    libsodium-dev,
+    libzmq4-dev,
+    libczmq-dev,
+    libdblocks-core0 (= ${binary:Version})
+Description: development files for dblocks-core
+ This package contains development files for dblocks-core: project
+
+
+Package: dblocks-core-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends:
+    libdblocks-core0 (= ${binary:Version}),
+    ${misc:Depends}
+Description: debugging symbols for dblocks-core
+ This package contains the debugging symbols for dblocks-core : project.
+
